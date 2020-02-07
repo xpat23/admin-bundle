@@ -12,7 +12,7 @@
   "require" : {
     "php": ">=7.2",
     "symfony/symfony": ">=3.4",
-    "knplabs/knp-paginator-bundle": "^2.8"
+    "knplabs/knp-paginator-bundle": ">=2.8"
   },
   "autoload" : {
     "psr-4" : { "Xpat\\AdminBundle\\" : "" }

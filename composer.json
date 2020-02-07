@@ -2,6 +2,7 @@
   "name" : "xpat/admin-bundle",
   "description" : "x_pat admin bundle",
   "type" : "symfony-bundle",
+  "version": "v1.0.1",
   "homepage": "https://github.com/xpat23/admin-bundle",
   "license" : "MIT",
   "keywords" : ["x_pat","admin bundle"],

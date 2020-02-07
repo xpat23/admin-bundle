@@ -1,7 +1,6 @@
 {
   "name" : "xpat/admin-bundle",
   "description" : "x_pat admin bundle",
-  "version" : "v1.0.0",
   "type" : "symfony-bundle",
   "homepage": "https://github.com/xpat23/admin-bundle",
   "license" : "MIT",
@@ -19,7 +18,7 @@
   },
   "extra" : {
     "branch-alias" : {
-      "dev-master" : "v1.0.0"
+      "dev-master" : "v1.0.0-dev"
     }
   }
 }

@@ -1,0 +1,59 @@
+{% extends params.baseLayout %}
+{# @var params \ReferenceBundle\Classes\ReferenceParameters #}
+{% block content_header %}
+    <h1>
+        {{ params.name }}
+        <small>Список</small>
+    </h1>
+{% endblock content_header %}
+{% block content %}
+    <div class="box box-info">
+        <div class="box-header with-border">
+            <a class="btn btn-primary" href="{{ path('crud_factory_new',{ refId : params.refId }) }}">
+                Добавить <i class="fa fa-fw fa-plus-square-o"></i>
+            </a>
+        </div>
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                {% for key,field in fields %}
+                    <th>{{ key }}</th>
+                {% endfor %}
+                <th> Действия </th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for entity in pagination %}
+                <tr>
+                    {% for key,field in fields %}
+                        <td> {{ field.call(this,entity,loop.parent.loop.index)|raw }} </td>
+                    {% endfor %}
+                    <td>
+
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Действие <span class="caret"></span></button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="{{ path('crud_factory_edit', { 'id': entity.id, refId : params.refId }) }}">
+                                        <span class="fa fa-edit"> </span>
+                                        Редактировать
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="{{ path("crud_factory_delete",{ id: entity.id,refId : params.refId }) }}">
+                                        <span class="fa fa-remove"> </span>
+                                        Удалить
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <div class="navigation">
+            {{ knp_pagination_render(pagination) }}
+        </div>
+    </div>
+{% endblock %}

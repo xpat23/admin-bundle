@@ -1,0 +1,25 @@
+{
+  "name" : "xpat/admin-bundle",
+  "description" : "x_pat admin bundle",
+  "version" : "v1.0.0",
+  "type" : "symfony-bundle",
+  "homepage": "https://github.com/xpat23/admin-bundle",
+  "license" : "MIT",
+  "keywords" : ["x_pat","admin bundle"],
+  "authors" : [{
+    "name" : "xpat",
+    "email" : "x.pat.kg@gmail.com"
+  }],
+  "require" : {
+    "php": ">=7.2",
+    "symfony/symfony": ">=3.4"
+  },
+  "autoload" : {
+    "psr-4" : { "Xpat\\AdminBundle\\" : "" }
+  },
+  "extra" : {
+    "branch-alias" : {
+      "dev-master" : "v1.0.0"
+    }
+  }
+}
